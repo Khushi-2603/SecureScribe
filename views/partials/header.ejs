@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureScribe</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="navbar flex justify-between items-center flex-wrap w-full px-20 py-10 ">
+        <h2 class="font-[400] text-[28px]  ">SecureScribe</h2>
+        <% if (success_msg) { %>
+          <div class="alert-danger absolute top-[12%] left-[46%] px-3 py-2  text-green-600 bg-white rounded-md "><%= success_msg %></div>
+      <% } %>
+      <% if (error) { %>
+          <div class="alert-danger absolute top-[12%] left-[46%] px-3 py-2  text-red-600 bg-white rounded-md "><%= error %></div>
+      <% } %>
+        <div class="links flex gap-2">
+            <a class=" mr-1 bg-blue-500 text-white px-4 py-2 rounded-lg" href="/profile">Home</a>   
+            <a class=" mr-1 bg-blue-500 text-white px-4 py-2 rounded-lg" href="/create">Create New Note</a>
+            <a class=" mr-1 bg-blue-500 text-white px-4 py-2 rounded-lg" href="/upload">Upload Profile</a>
+            <a href="/logout" class="mr-1 bg-red-500 text-white px-4 py-2 rounded-lg" >Logout</a> 
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- <% var error=typeof error==='undefined' ? "" : error %>
+    <% if(error.length> 0){ %>
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-2 bg-red-500 rounded-md">
+      <h3 class="text-red-200">
+        <%= error %>
+      </h3>
+    </div>
+    <% } %> -->

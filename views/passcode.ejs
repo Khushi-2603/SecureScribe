@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureScribe</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h2 class="font-[400] text-[28px] absolute top-[10%] left-[10%] ">SecureScribe</h2>
+    <a class="bg-blue-500 text-white px-4 py-2 rounded-lg  absolute top-[10%] left-[80%]" href="/profile">Home</a>
+    <div class="logincontainer w-full h-[80%] flex items-center justify-center mt-5">
+        <div class="loginpanel">
+            <h3 class="text-2xl mb-3">Passcode Needed.</h3>
+            <form autocomplete="off" action="/hisaab/verify/<%=users._id%>" class="flex flex-col gap-2 items-start"
+                method="post">
+                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md mt-3`" required type="password"
+                    placeholder="passcode" name="passcode">
+                <input class="block px-4 py-2  ml-10 bg-blue-500 rounded-md text-white" type="submit" value="View Note">
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>

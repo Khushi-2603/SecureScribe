@@ -1,0 +1,13 @@
+<%- include('./partials/header.ejs') %>
+    <h1 class="  w-72 ml-20 mb-4 text-2xl "> Update Your Details</h1>
+    <form action="/hisaab/update/<%=users._id%>" method="post">
+        <input class=" bg-zinc-200 text-zinc-800 ml-16  w-60 h-10 rounded-md outline-none  mt-3  px-2 py-2   " type="text" value="<%=users.title%>"  readonly="true">
+        <input class=" bg-zinc-200 ml-3 w-60 h-10 rounded-md outline-none  mt-3   px-2 py-2 " type="text" value="<%=users.description%>"  readonly="true">
+
+        <br>
+        <input class=" bg-zinc-200 ml-16 w-60 h-10 rounded-md outline-none  mt-3  px-2 py-2 " type="text" placeholder="New Title"  name="title">
+        <input class=" bg-zinc-200 ml-3 w-60 h-10 rounded-md outline-none  mt-3  px-2 py-2 " type="text"  placeholder="New Notes" name="description">
+
+        <input class="mt-2 text-black  bg-yellow-400 px-5 py-2 w-62 rounded-md ml-3" type="submit" value="Update User">
+    </form>
+    <%- include('./partials/footer.ejs') %>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureScribe</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="navbar flex  h-full w-full px-20 py-10">
+        <h2 class="font-[400] text-[28px] mt-5 ">SecureScribe</h2>
+        <% if (success_msg) { %>
+            <div class="alert-danger absolute top-[12%] left-[45%] px-3 py-2  text-green-600 bg-white rounded-md "><%= success_msg %></div>
+        <% } %>
+        <% if (error) { %>
+            <div class="alert-danger absolute top-[12%] left-[45%] px-3 py-2  text-red-600 bg-white rounded-md "><%= error %></div>
+        <% } %>
+    <div class="logincontainer w-full h-[100%] flex items-center justify-center">
+        <div class="loginpanel">
+            <h3 class="text-2xl mb-3 ml-4 ">Create Account</h3>
+            <form action="/register" class="flex flex-col gap-2 items-start" method="post">
+                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md" type="email" required placeholder="Email"
+                    name="email">
+                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md" required type="text"
+                    placeholder="Username" name="username">
+                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md" required  type="text"
+                    placeholder="Full Name" name="name">
+                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md" required type="password"
+                    placeholder="password" name="password">
+                <input class="block px-5 py-2 bg-blue-500 ml-14 mt-2  rounded-md text-white" type="submit" value="Create">
+            </form>
+            <a class="mt-2 inline-block text-blue-500 ml-1" href="/">Have an Account, Login Here.</a>
+        </div>
+    </div>
+</div>
+    <%- include('./partials/footer.ejs') %>

@@ -1,0 +1,12 @@
+<%- include('./partials/header.ejs') %>
+<body class=" bg-white">
+   <div class="main h-screen w-screen p-6 text-white bg-white ">
+<div class=" items-start justify-start flex-col m-10 ">
+    <h2 class="text-[25px] mb-7 font-[500] text-zinc-500 ">Upload Profile</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input class="bg-zinc-800 font-[500] text-[15px] mr-2  text-white px-2 py-2 rounded-lg" type="file" name="image">
+        <input class="block mt-7 bg-blue-500 text-white px-6 py-2 rounded-md text-[17px] ml-[50px] outline-none" type="submit" value="Upload">
+    </form>
+</div>
+   </div>
+<%- include('./partials/footer.ejs') %>
